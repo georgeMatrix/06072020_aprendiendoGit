@@ -20,9 +20,9 @@ public class PadreController {
     public List<Padres> getPadres(){
         return padreService.getPadres();
     }
-
+    
     @PostMapping("/padres")
-    public Padres padresSave(Padres padres){
+    public Padres savePadres(Padres padres){
         return padreService.savePadres(padres);
     }
 }
