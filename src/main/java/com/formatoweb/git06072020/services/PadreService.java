@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface PadreService {
     List<Padres> getPadres();
+    Padres savePadres(Padres padres);
 }
