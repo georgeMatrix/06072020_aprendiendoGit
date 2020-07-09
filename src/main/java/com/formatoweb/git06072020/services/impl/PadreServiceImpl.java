@@ -16,4 +16,9 @@ public class PadreServiceImpl implements PadreService {
     public List<Padres> getPadres() {
         return padreRepository.findAll();
     }
+
+    @Override
+    public Padres savePadres(Padres padres) {
+        return padreRepository.save(padres);
+    }
 }
