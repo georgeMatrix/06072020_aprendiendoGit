@@ -41,4 +41,8 @@ public class PadreController {
     public void deletePadres(@PathVariable Long id){
         padreService.deletePadre(id);
     }
+
+    private void nueva(){
+
+    }
 }
