@@ -37,6 +37,10 @@ public class PadreController {
         return padreService.savePadres(padreViejo);
     }
 
+    public void metodoDos(){
+
+    }
+
     @DeleteMapping("/padres/{id}")
     public void deletePadres(@PathVariable Long id){
         padreService.deletePadre(id);
