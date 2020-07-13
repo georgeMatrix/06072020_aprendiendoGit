@@ -8,4 +8,5 @@ public interface PadreService {
     List<Padres> getPadres();
     Padres savePadres(Padres padres);
     Padres getPadresById(Long id);
+    void deletePadre(Long id);
 }

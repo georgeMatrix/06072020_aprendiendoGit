@@ -26,4 +26,9 @@ public class PadreServiceImpl implements PadreService {
     public Padres getPadresById(Long id) {
         return padreRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public void deletePadre(Long id) {
+        padreRepository.deleteById(id);
+    }
 }
