@@ -21,4 +21,9 @@ public class PadreServiceImpl implements PadreService {
     public Padres savePadres(Padres padres) {
         return padreRepository.save(padres);
     }
+
+    @Override
+    public Padres getPadresById(Long id) {
+        return padreRepository.findById(id).orElse(null);
+    }
 }
