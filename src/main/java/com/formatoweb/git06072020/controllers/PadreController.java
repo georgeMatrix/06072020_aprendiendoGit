@@ -27,4 +27,13 @@ public class PadreController {
     public Padres getPadreId(@PathVariable Long id){
         return padreService.getPadresById(id);
     }
+
+    @PutMapping("/padres/{id}")
+    public Padres updatePadres(@RequestBody Padres padreNuevo, @PathVariable Long id){
+        Padres padreViejo = padreService.getPadresById(id);
+        padreViejo.setNombrePadre(padreNuevo.getNombrePadre());
+        padreViejo.setApellidoPadre(padreNuevo.getApellidoPadre());
+        padreViejo.setEdadPadre(padreNuevo.getEdadPadre());
+        return padreService.savePadres(padreViejo);
+    }
 }
